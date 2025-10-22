@@ -1,17 +1,3 @@
-const dateContainer = document.querySelector(".current-date");
-const p = document.createElement("p");
-dateContainer.appendChild(p);
-
-const updateDate = () => {
-  const now = new Date();
-  const timeString = `${now.toLocaleTimeString()}.${now.getMilliseconds()}`;
-  p.textContent = timeString;
-};
-
-updateDate();
-
-setInterval(updateDate, 1000);
-
 const form = document.getElementById("contactForm");
 const successDiv = document.getElementById("successMessage");
 
@@ -33,15 +19,14 @@ form.addEventListener("submit", function (e) {
   else if (message.length < 10)
     errors.message = "Message must be at least 10 characters.";
 
-
   ["name", "email", "subject", "message"].forEach((id) => {
     const errorDiv = document.getElementById("error-" + id);
     if (errors[id]) {
-      errorDiv.innerText = errors[id];
-      errorDiv.style.display = "block";
+      errorDiv.textContent = errors[id];
+      errorDiv.classList.add("visible-error");
     } else {
-      errorDiv.innerText = "";
-      errorDiv.style.display = "none";
+      errorDiv.textContent = "";
+      errorDiv.classList.remove("visible-error");
     }
   });
 

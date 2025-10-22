@@ -258,7 +258,7 @@ form label {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.errorText[role="alert"] {
+.errorText.visible-error {
   opacity: 1;
   transform: translateY(0);
 }

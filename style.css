@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  background: #000;
+  font-family: "Poppins", sans-serif;
+  color: rgba(0, 0, 0, 0.724);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 0.4rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-radius: 0 0 15px 15px;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb6f9;
+}
+
+.active {
+  border-bottom: 2px solid white;
+  padding-bottom: 3px;
+  color: #ffb6f9;
+}
+
+main {
+  min-height: 100dvh;
+  background: url("/images/vecteezy_ai-generated-generative-ai-abstract-pastel-pink-blue-purple_35662025.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #f5f5f5eb;
+  text-decoration: none;
+}
+
+.profile-card {
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  margin: 20px;
+  height: 500px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  animation: float 4s ease-in-out infinite;
+  color: #f5f5f5eb;
+}
+
+.profile-card:hover {
+  transform: translateY(-15px) rotateX(10deg) rotateY(-10deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+}
+
+.profileImage img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links nav ul li {
+  display: flex;
+  border-radius: 50%;
+  padding: 8px;
+  transition: transform 0.7s ease-in;
+}
+
+.social-links nav ul li:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  transform: scale(0.7);
+}
+
+.fa-brands {
+  font-size: 24px;
+}
+
+.hobbies-dislikes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerText h1,
+.aboutContainer h1 {
+  color: white;
+  font-weight: 700;
+}
+.contactFormInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 90%;
+  max-width: 350px;
+  margin: 20px;
+  height: 500px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  animation: float 4s ease-in-out infinite;
+  color: #f5f5f5eb;
+}
+
+form input {
+  outline: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 4px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.25) inset !important; /* semi-transparent glass look */
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+form label {
+  font-weight: 500;
+  color: #fff;
+}
+.formButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.formButton button {
+  padding: 10px 14px;
+  background: linear-gradient(90deg, #e879f9, #8b5cf6);
+  border-style: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.formButton button:hover {
+  box-shadow: 0 0 10px #e879f9;
+  transform: scale(1.05);
+}
+
+.errorText {
+  color: #d93025;
+  font-size: 0.9rem;
+  margin-top: 1px;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.errorText[role="alert"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.successMessage {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4bb543;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+  z-index: 1000;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Me */
+
+.aboutContainer {
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.aboutCard {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.aboutImage {
+  flex: 1 1 350px;
+  position: relative;
+}
+
+.sectionContainer {
+  flex: 1 1 400px;
+  min-width: 250px;
+}
+.aboutImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.sectionContainer p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.sectionContainer h2 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hobbies-dislikes {
+    flex-wrap: wrap;
+  }
+
+  .profile-card {
+    text-align: center;
+  }
+
+  figure {
+    margin: 0 auto;
+  }
+  .aboutCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .aboutImage {
+    max-width: 290px;
+    margin: 0 auto 1rem;
+  }
+
+  .sectionContainer {
+    width: 100%;
+  }
+
+  .sectionContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .sectionContainer p {
+    font-size: 0.9rem;
+  }
+}
+
+.errorText {
+  color: red;
+}
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin: 10px 0;
+}
+.closeBtn {
+  margin-left: 10px;
+  cursor: pointer;
+}
